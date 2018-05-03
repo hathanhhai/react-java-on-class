@@ -2020,7 +2020,6 @@ blockquote:before {
 }
 .nav-desktop ul li.menu-parent > a:after {
   margin-top: 2px;
-  content: '';
   border: 4px solid transparent;
   border-top-color: #333;
   display: inline-block;
@@ -2116,7 +2115,7 @@ blockquote:before {
 }
 .nav ul li.menu-parent > a:after {
   margin-top: 2px;
-  content: '';
+  
   border: 4px solid transparent;
   border-top-color: #fff;
   display: inline-block;

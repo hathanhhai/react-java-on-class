@@ -21,14 +21,7 @@ class HomeList extends Component {
         </div>
         <div className="container">
           <div className="cruise-deals-cn clearfix">
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
-            <Item></Item>
+          {this.props.children}
           </div>
         </div>
       </React.Fragment>

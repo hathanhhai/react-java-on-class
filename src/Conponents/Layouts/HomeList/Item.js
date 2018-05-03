@@ -1,34 +1,41 @@
 import React, { Component } from 'react';
+import {Link,NavLink} from 'react-router-dom';
 class Item  extends Component {
-    state = {  }
+   
     render() {
+    
+      const {id,name,image,schedule,enddate,endpoint,price,startdate,startpoint} = this.props.tour
+ 
         return (
-            <div className="col-xs-6 col-md-4 col-lg-3">
+
+ 
+            <div onClick={this.onRedirect}  className="col-xs-6 col-md-4 col-lg-3">
             <div className="cruise-deal-item">
               <figure className="cruise-img">
-                <a href="tour-detail.html" title="">
-                  <img src="images/deal/img-5.jpg" alt="" />
-                </a>
+              <Link to={`/tour/${id}`}>
+                  <img src={`images/tours/${image}`} alt="" />
+               </Link>
               </figure>
               <div className="cruise-text">
                 <div className="cruise-name">
-                  <a href="tour-detail.html" title="">
-                    Amsterdam
+                  <a href="#" title="">
+                    {name}
                   </a>
                 </div>
                 <div className="cruise-night">
-                  <span>9 nights</span> - 05/12 - 12/14
+                 Khởi Hành <span>{startdate}</span> - {enddate}
                 </div>
-                <hr className="hr" />
+             
                 <div className="price-box">
                   <span className="price old-price">
-                    Only <del>$269</del>
+                   Lich Trình: {startpoint} - {endpoint}
                   </span>
-                  <span className="price special-price">$175</span>
+                  <span className="price special-price">{price} VND</span>
                 </div>
               </div>
             </div>
           </div>
+          
         );
     }
 }
