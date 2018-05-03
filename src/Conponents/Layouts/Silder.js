@@ -1,9 +1,21 @@
 import React, { Component } from "react";
-
+import axios from 'axios';
+import curl from 'curl';
 class Header extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+
+            file:''
+        }
+    }
+    onChange=(e)=> {
+        this.setState({file:e.target.files[0]})
+      }
   render() {
     return (
       <section className="banner">
+     
       <div className="bg-parallax bg-1"></div>
       <div className="container">
           <div className="banner-cn">
@@ -53,7 +65,8 @@ class Header extends Component {
                           </div>
                       </div>
                       <div className="form-submit">
-                          <button type="submit" className="awe-btn awe-btn-medium awe-search">Search</button>
+                      <input type="file" onChange={this.onChange} />
+                          <button onClick={this.onTest} type="submit" className="awe-btn awe-btn-medium awe-search">Search</button>
                       </div>
                   </div>
               </div>
@@ -63,6 +76,37 @@ class Header extends Component {
   </section>
     );
   }
+  onTest = (e) =>{
+      e.preventDefault();
+    //    axios({
+    //        url:'http://localhost:8081/form/hello',
+    //        method:'get',
+    //    }).then(res=>{
+    //        console.log(res);
+    //    })
+    // var bodyFormData = new FormData();
+    // bodyFormData.set('file',this.state.file)
+    // bodyFormData.set('id', 'Fred');
+    //     axios({
+    //         method: 'post',
+    //         url: 'http://localhost:8081/form/hello',
+    //         data: bodyFormData,
+    //         config: { headers: {'Content-Type': 'multipart/form-data' }}
+    //     });
+       
+
+        axios({
+            method: 'delete',
+            url: 'http://localhost:8081/form/hello/5',
+
+        }).then(res=>{
+            console.log(res)
+        })
+    
+       
+                
+  }
+
 }
 
 export default Header;

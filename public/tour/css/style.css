@@ -2020,7 +2020,7 @@ blockquote:before {
 }
 .nav-desktop ul li.menu-parent > a:after {
   margin-top: 2px;
-  content: '';
+ 
   border: 4px solid transparent;
   border-top-color: #333;
   display: inline-block;
@@ -5024,12 +5024,14 @@ blockquote:before {
   font-size: 34px;
 }
 .support {
-  color: #333333;
+  color:#26aa44;
   font-size: 16px;
   font-family: 'Open sans';
   right: 15px;
   font-style: italic;
   font-weight: 300;
+  text-align: center;
+
 }
 .support small {
   font-family: Georgia;
@@ -11811,4 +11813,9 @@ footer .copyright {
   footer .copyright {
     font-size: 13px;
   }
+}
+
+
+.mt-bot{
+  margin-bottom: 20px;
 }

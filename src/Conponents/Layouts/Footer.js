@@ -31,43 +31,7 @@ class Footer  extends Component {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-sm-6 col-md-4">
-                        <div className="currency-lang-bottom dropdown-cn float-left">
-                            <div className="dropdown-head">
-                                <span className="angle-down"><i className="fa fa-angle-down"></i></span>
-                            </div>
-                            <div className="dropdown-body">
-                                <ul>
-                                    <li className="current"><a href="#" title="">English</a></li>
-                                    <li><a href="#" title="">Bahasa Melayu</a></li>
-                                    <li><a href="#" title="">Català</a></li>
-                                    <li><a href="#" title="">Dansk</a></li>
-                                    <li><a href="#" title="">Deutsch</a></li>
-                                    <li><a href="#" title="">Francais</a></li>
-                                    <li><a href="#" title="">Italiano</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="currency-lang-bottom dropdown-cn float-left">
-                            <div className="dropdown-head">
-                                <span className="angle-down"><i className="fa fa-angle-down"></i></span>
-                            </div>
-                            <div className="dropdown-body">
-                                <ul>
-                                    <li className="current"><a href="#" title="">US</a></li>
-                                    <li><a href="#" title="">ARS</a></li>
-                                    <li><a href="#" title="">ADU</a></li>
-                                    <li><a href="#" title="">CAD</a></li>
-                                    <li><a href="#" title="">CHF</a></li>
-                                    <li><a href="#" title="">CNY</a></li>
-                                    <li><a href="#" title="">CZK</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p className="copyright">
-                            © 2009 – 2014 Bookyourtrip™ All rights reserved.
-                        </p>
-                    </div>
+                  
                 </div>
             </div>
         </footer>
