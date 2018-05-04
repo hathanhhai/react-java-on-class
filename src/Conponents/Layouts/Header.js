@@ -4,15 +4,22 @@ import {connect} from 'react-redux'
 import {logoutUser} from '../../Actions/UserAction';
 
 class Header extends Component {
+
+  constructor(props){
+    super(props);
+    this.state ={
+      count:null
+    }
+  }
+
   componentWillMount() {
     this.showAccount();
+    
   }
  
 
  
   showAccount = () => {
-   
-    
     if (!localStorage.getItem("login")) {
       return (<li className="menu-parent dropmenu">
         <Link to="/account" >
@@ -58,7 +65,7 @@ class Header extends Component {
 
 
   render() {
-
+    var showCountCart = (this.props.cart.length>0) ? `(${this.props.cart.length})` : null;
 
     return (
       <header id="header" className="header">
@@ -90,12 +97,9 @@ class Header extends Component {
 
                     </li>
 
-
-
                     <li className="menu-parent">
-                      <a href="#" title="">
-                        Giỏ Hàng
-                      </a>
+                     
+                      <Link to="/my-cart">  Giỏ Hàng {showCountCart}</Link>
 
                     </li>
                     {this.showAccount()}
@@ -113,7 +117,7 @@ class Header extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
   return {
-     
+     cart:state.Cart
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {

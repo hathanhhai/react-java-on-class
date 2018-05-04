@@ -3291,7 +3291,7 @@ blockquote:before {
 .flight-page:before,
 .hotel-maps:before {
   position: absolute;
-  background: url('../images/bg-border-h.png') repeat-y top left;
+  
   content: '';
   top: 0;
   bottom: 0;

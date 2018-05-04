@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {fetchTourOneRequest} from '../../Actions/TourAction';
+import {addToCart} from '../../Actions/CartAction';
 import {connect} from 'react-redux';
 class TourDetail extends Component {
     constructor(props){
@@ -16,15 +17,7 @@ class TourDetail extends Component {
         }
     }
     componentWillReceiveProps(nexProps){
-    
         this.setState(nexProps.tour_one[0]);
-       
-        nexProps.tour_one.map((item,index)=>{
-            this.setState({
-                tour_one:item.name
-            })
-        })
-       
       }
     render() {
     
@@ -100,7 +93,7 @@ class TourDetail extends Component {
                                         
                                             <h2 className="title-detail">
                                                 Mô Tả
-                                                <a href="" title="" className="awe-btn awe-btn-1 awe-btn-lager float-right">Đặt Tour</a>
+                                                <a  onClick={this.onAddToCart}  title="" className="awe-btn awe-btn-1 awe-btn-lager float-right">Đặt Tour</a>
                                     </h2>
                                     
                                             <div className="tour-detail-text">
@@ -122,6 +115,9 @@ class TourDetail extends Component {
             </React.Fragment>
         );
     }
+    onAddToCart = () =>{
+        this.props.onAddToCart(this.state,1);
+    }
 }
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -132,7 +128,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onFetchOne:(id)=>{
             dispatch(fetchTourOneRequest(id))
-        }
+        },
+        onAddToCart : (tour,quantity) =>{
+            dispatch(addToCart(tour,1))
+        } 
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(TourDetail);

@@ -6,10 +6,10 @@ import {logoutUser} from '../../Actions/UserAction';
 
 class HomePage  extends Component {
     handleLogout = () =>{
-        console.log(1);
+      
     }
     render() {
-        console.log(this.props.history)
+        
         return (
             <React.Fragment>
                 <Header history={ this.props.history} ></Header>

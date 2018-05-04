@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HomePage from './Pages/Home/HomePage';
 import Account from './Pages/Users/Account';
 import DetailPage from './Pages/Home/DetailPage';
+import CartPage from './Pages/Home/CartPage';
 
 
 const routes = [
@@ -14,6 +15,11 @@ const routes = [
         path:'/account',
         exact:false,
         main:({history})=><Account history={history}/>
+    },
+    {
+        path:'/my-cart',
+        exact:true,
+        main:({history})=><CartPage history={history}/>
     },
     {
         path:'/tour/:id',
