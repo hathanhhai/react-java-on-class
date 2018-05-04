@@ -5,6 +5,7 @@ import Footer from '../../Conponents/Layouts/Footer';
 import Account from '../Users/Account';
 import CartItem from '../../Conponents/Layouts/Cart/CartItem';
 import {connect} from 'react-redux'
+import CartTotal from '../../Conponents/Layouts/Cart/CartTotal'
 class CartPage extends Component {
 
     constructor(props){
@@ -18,8 +19,10 @@ class CartPage extends Component {
         return (
             <React.Fragment>
                 <Header></Header>
-                <CartList>
+                <CartList >
                         {this.showCartItem(this.props.cart)}
+                        {this.totalCart(this.props.cart)}
+
                 </CartList>
 
                 <Footer></Footer>
@@ -39,6 +42,16 @@ class CartPage extends Component {
             this.props.history.goBack();
         }
         return result;
+    }
+    totalCart(cart){
+        var total = 0;
+        if(cart.length > 0 ){
+            for(var i=0;i<cart.length ; i++){
+                total +=cart[i].tour.price * cart[i].quantity;
+            }
+            return <CartTotal total={total} />
+        }
+        return null;
     }
 }
 const mapStateToProps = (state, ownProps) => {

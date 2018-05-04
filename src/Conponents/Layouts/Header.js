@@ -99,7 +99,7 @@ class Header extends Component {
 
                     <li className="menu-parent">
                      
-                      <Link to="/my-cart">  Giỏ Hàng {showCountCart}</Link>
+                      <Link to="/my-cart">  Giỏ Hàng <ins className="cart-count"> {showCountCart}</ins></Link>
 
                     </li>
                     {this.showAccount()}

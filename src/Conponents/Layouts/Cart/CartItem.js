@@ -19,10 +19,10 @@ class CartItem extends Component {
                                                     </div>
 
                                                     <span className="package-rating">
-                                                        Tồng Tiền: <ins>{price * this.props.quantity} VND</ins> 
+                                                        Tồng Tiền: <ins>VND</ins> 
                                         </span>
                                             <address className="package-address">
-                                                    Số Lượng: {this.props.quantity}
+                                                    Số Lượng: 
                                                 </address>
                                                     <address className="package-address">
                                                         {startdate}/{enddate}
@@ -32,12 +32,12 @@ class CartItem extends Component {
                                                  </span>
                                                     <div className="price-box">
                                                         <span className="price separately">
-                                                            Booked separately <br />
-                                                            <ins>$4250</ins>
+                                                           Số Lượng <br />
+                                                            <ins>{this.props.quantity}</ins>
                                                         </span>
                                                         <span className="price together">
-                                                            Booked together<br />
-                                                            <ins>$1,757</ins><small>/night</small>
+                                                            Thành Tiền<br />
+                                                            <ins>{price * this.props.quantity} </ins><small> VND</small>
                                                         </span>
                                                     </div>
                                                 </div>
