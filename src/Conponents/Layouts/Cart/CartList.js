@@ -13,9 +13,9 @@ class CartList extends Component {
     }
     
     render() {
-       var showform = (this.state.isShowForm) ? <CartForm/>  :null;
+       var showform = (this.state.isShowForm) ? <CartForm  history={this.props.history}  total={this.props.totalCart.props.total}/>  :null;
        var changText = (!this.state.isShowForm) ? 'Đặt Hàng' : 'Ẩn'
-      
+    
         return (
             <React.Fragment>
                  {this.showform}

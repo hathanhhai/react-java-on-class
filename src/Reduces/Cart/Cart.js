@@ -18,6 +18,11 @@ const myReducer = (state=initialState,action) =>{
             }
             localStorage.setItem("Cart",JSON.stringify(state));
             return [...state];
+        case Types.CART_REMOVE:
+                var index = findTourInCart(state,action.cart);
+                state.splice(index,1);
+                localStorage.setItem("Cart",JSON.stringify(state));
+              return [...state];   
         default:
         return [...state];
     }
@@ -32,5 +37,6 @@ var findTourInCart = (state,tour) =>{
         });
     return result;
 }
+
 
 export default myReducer;

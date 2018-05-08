@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {fetchTourOneRequest} from '../../Actions/TourAction';
 import {addToCart} from '../../Actions/CartAction';
 import {connect} from 'react-redux';
+
 class TourDetail extends Component {
     constructor(props){
         super(props);
@@ -25,12 +26,13 @@ class TourDetail extends Component {
        
         return (
             <React.Fragment>
+              
                 <section className="sub-banner">
                     <div className="bg-parallax bg-1"></div>
 
                     <div className="logo-banner text-center">
                         <a href="" title="">
-                            <img   alt="" />
+                            <img    alt="" />
                         </a>
                     </div>
                 </section>
@@ -67,19 +69,22 @@ class TourDetail extends Component {
                                     </div>
                                 </div>
                             </section>
-
+               
                             <section className="detail-slider">
+                      
+                        <div className="slide-room-lg">
+                            
+                      
+                         <div id="slide-room-lg">
+                                <img with="1000" height="400" src={window.location.origin + `/images/tours/${this.state.image}`} alt=""/>
+                            </div>
 
-                                <div className="slide-room-lg">
-                                    <div id="slide-room-lg">
-                                        <img src="images/tour/slide/img-1.jpg" alt="" />
+                         
+                        </div>
+                   
+                    
+                    </section>
 
-                                    </div>
-                                </div>
-
-
-
-                            </section>
 
                             <section className="tour-overview detail-cn" id="tour-overview">
                                 <div className="row">
@@ -97,7 +102,9 @@ class TourDetail extends Component {
                                     </h2>
                                     
                                             <div className="tour-detail-text">
-                                               {this.state.description}
+                                          
+                                               {this.state.description}      
+                  
                                     </div>
 
                                         </div>

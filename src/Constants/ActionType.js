@@ -26,6 +26,7 @@ export const CART_REMOVE = 'CART_REMOVE';
 export const CART_SUBMIT = 'CART_SUBMIT';
 export const CART_CHANGE_UP = 'CART_CHANGE_UP';
 export const CART_CHANGE_DOWN = 'CART_CHANGE_DOWN';
+export const SAVE_CART = 'SAVE_CART';
 
 //-------------- CART--------------------//
 

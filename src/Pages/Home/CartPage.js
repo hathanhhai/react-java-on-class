@@ -6,6 +6,7 @@ import Account from '../Users/Account';
 import CartItem from '../../Conponents/Layouts/Cart/CartItem';
 import {connect} from 'react-redux'
 import CartTotal from '../../Conponents/Layouts/Cart/CartTotal'
+import {removeItemCart} from '../../Actions/CartAction'
 class CartPage extends Component {
 
     constructor(props){
@@ -19,7 +20,7 @@ class CartPage extends Component {
         return (
             <React.Fragment>
                 <Header></Header>
-                <CartList >
+                <CartList history={this.props.history} totalCart={this.totalCart(this.props.cart)}>
                         {this.showCartItem(this.props.cart)}
                         {this.totalCart(this.props.cart)}
 
@@ -34,7 +35,7 @@ class CartPage extends Component {
         if(cart.length >0){
             result = cart.map((item,index)=>{
                 return (
-                    <CartItem quantity={item.quantity} key={index} cart={item}></CartItem>
+                    <CartItem  onRemoveCart={this.handleRemoveCart} quantity={item.quantity} key={index} cart={item}></CartItem>
                 )
             });
         }else{
@@ -43,6 +44,7 @@ class CartPage extends Component {
         }
         return result;
     }
+
     totalCart(cart){
         var total = 0;
         if(cart.length > 0 ){
@@ -53,6 +55,9 @@ class CartPage extends Component {
         }
         return null;
     }
+    handleRemoveCart = (value) =>{
+        this.props.removeItemCart(value)
+    }
 }
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -61,7 +66,9 @@ const mapStateToProps = (state, ownProps) => {
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-       
+        removeItemCart:(cart)=>{
+            dispatch(removeItemCart(cart))
+        }
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(CartPage);

@@ -40,10 +40,15 @@ class Header extends Component {
             </a>
               </li>
               <li>
-                <a href="cruise-list.html">Quản Lí Tour</a>
+                <Link to="/listtour">Quản lí Tour</Link>
+               
               </li>
               <li>
-                <a onClick={this.props.onHandleLogout} href="#">Đăng Xuất</a>
+              
+                <Link to="/addtour">Thêm Tour</Link>
+              </li>
+              <li>
+                <a onClick={this.props.onHandleLogout} >Đăng Xuất</a>
               </li>
             </ul>
           </li>
@@ -51,7 +56,7 @@ class Header extends Component {
       }else{
         return (
           <li className="menu-parent">
-            <a onClick={this.props.onHandleLogout} href="#" title="">
+            <a onClick={this.props.onHandleLogout} title="">
               Đăng Xuất
         </a>
             
@@ -98,9 +103,7 @@ class Header extends Component {
                     </li>
 
                     <li className="menu-parent">
-                     
-                      <Link to="/my-cart">  Giỏ Hàng <ins className="cart-count"> {showCountCart}</ins></Link>
-
+                      <Link to="/my-cart">  Giỏ Hàng {showCountCart}</Link>
                     </li>
                     {this.showAccount()}
 

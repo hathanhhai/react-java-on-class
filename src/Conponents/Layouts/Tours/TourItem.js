@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
 class CartItem extends Component {
-    onRemoveCart = (value) =>{
-        
-        this.props.onRemoveCart(value);
-    }
+ 
     render() {
-        const {id,name,image,schedule,enddate,endpoint,price,startdate,startpoint} = this.props.cart.tour
+        const {id,name,image,schedule,enddate,endpoint,price,startdate,startpoint} = this.props.tour
         
         return ( 
             <React.Fragment>
@@ -23,31 +20,31 @@ class CartItem extends Component {
                                                     </div>
 
                                                     <span className="package-rating">
-                                                        Tồng Tiền: <ins>VND</ins> 
+                                                        Tiền: {price}<ins> VND</ins> 
                                         </span>
                                             <address className="package-address">
-                                                    Số Lượng: 
+                                               
                                                 </address>
                                                     <address className="package-address">
                                                         {startdate}/{enddate}
                                                 </address>
                                                 <span className="price separately">
-                                                <a onClick={()=>this.onRemoveCart(this.props.cart.tour)}>Xóa</a>
+                                              
                                                  </span>
                                                     <div className="price-box">
-                                                        <span className="price separately">
-                                                           Số Lượng <br />
-                                                            <ins>{this.props.quantity}</ins>
-                                                        </span>
+                                                        
                                                         <span className="price together">
-                                                            Thành Tiền<br />
-                                                            <ins>{price * this.props.quantity} </ins><small> VND</small>
+                                                    
+                                                            <ins onClick={()=>this.onRemove(id)}>Xóa</ins><small> </small>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                 </React.Fragment>
         );
+    }
+    onRemove = (value) =>{
+        this.props.onRemove(value)
     }
 }
 
