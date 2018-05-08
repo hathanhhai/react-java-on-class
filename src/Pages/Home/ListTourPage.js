@@ -7,13 +7,14 @@ import Footer from '../../Conponents/Layouts/Footer';
 import {connect} from 'react-redux'
 import {deleteTourRequest} from '../../Actions/TourAction'
 class ListTourPage extends Component {
-    
+    componentWillMount(){
+
+    }
     render() {
         console.log(this.props)
         return (
             <React.Fragment>
                 <Header></Header>
-                
                 <TourList history={this.props.history}>
                     {this.showCartItem(this.props.tour)}
                 </TourList>

@@ -43,15 +43,8 @@ class TourDetail extends Component {
 
 
                             <section className="breakcrumb-sc">
-                                <ul className="breadcrumb arrow">
-                                    <li><a href="index.html"><i className="fa fa-home"></i></a></li>
-                                    <li><a href="hotel.html" title="">Hotels</a></li>
-                                    <li><a href="#" title="">Europe </a></li>
-                                    <li>Netherlands</li>
-                                </ul>
-                                <div className="support float-right">
-                                    <small>Got a question?</small> 123-123-1234
-                        </div>
+                               
+                            
                             </section>
 
                             <section className="head-detail">

@@ -30,8 +30,8 @@ import * as Types from '../../../Constants/ActionType'
         e.preventDefault();
        this.props.onSubmit(this.state);
        alert('Đặt hàng thành công !!!');
-       //localStorage.removeItem("Cart");
-       this.props.history.goBack();
+       localStorage.removeItem("Cart");
+       this.props.history.go("/")
      
     }
     render() {
@@ -52,7 +52,7 @@ import * as Types from '../../../Constants/ActionType'
                                             </div>
                                            
                                     <div className="field-input">
-                                        <button type="submit" className="awe-btn awe-btn-1 awe-btn-medium">Sign up</button>
+                                        <button type="submit" className="awe-btn awe-btn-1 awe-btn-medium">Gửi</button>
                                     </div>
                                     </form>
                                 </div>

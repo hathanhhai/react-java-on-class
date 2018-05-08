@@ -21,7 +21,7 @@ class Header extends Component {
           <div className="banner-cn">
               <div className="logo-banner text-center">
                   <a href="" title="">
-                      <img src="images/logo-banner.png" alt=""/>
+                      <img  src="images/logo-banner.jpg" alt=""/>
                   </a>
               </div>
               <div className="category-singer clearfix">

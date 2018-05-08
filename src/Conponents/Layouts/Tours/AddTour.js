@@ -87,7 +87,7 @@ import {saveTourRequest} from '../../../Actions/TourAction'
         e.preventDefault();
        this.props.onSubmit(this.state);
        alert("Thêm thành công");
-       this.props.history.goBack();
+       this.props.history.go("/")
        
     }
 }
