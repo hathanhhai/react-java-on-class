@@ -34,11 +34,7 @@ class Header extends Component {
               Quản Lí
         </a>
             <ul className="sub-menu">
-              <li>
-                <a href="home-cruise.html" title="">
-                  Quản Lí Hóa Đơn
-            </a>
-              </li>
+             
               <li>
                 <Link to="/listtour">Quản lí Tour</Link>
                
