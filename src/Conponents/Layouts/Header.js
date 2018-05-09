@@ -47,16 +47,16 @@ class Header extends Component {
               
                 <Link to="/addtour">Thêm Tour</Link>
               </li>
-              <li>
-                <a onClick={this.props.onHandleLogout} >Đăng Xuất</a>
+              <li onClick={this.props.onHandleLogout}>
+                <a  >Đăng Xuất</a>
               </li>
             </ul>
           </li>
         )
       }else{
         return (
-          <li className="menu-parent">
-            <a onClick={this.props.onHandleLogout} title="">
+          <li onClick={this.props.onHandleLogout} className="menu-parent">
+            <a  title="">
               Đăng Xuất
         </a>
             

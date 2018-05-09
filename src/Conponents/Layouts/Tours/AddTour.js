@@ -73,7 +73,7 @@ import {saveTourRequest} from '../../../Actions/TourAction'
                                             </div>
                                             
                                     <div className="field-input">
-                                        <button type="submit"  className="awe-btn awe-btn-1 awe-btn-medium">Sign up</button>
+                                        <button type="submit"  className="awe-btn awe-btn-1 awe-btn-medium">Add</button>
                                     </div>
                                     </form>
                                 </div>
